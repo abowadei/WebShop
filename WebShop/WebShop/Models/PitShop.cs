@@ -8,10 +8,7 @@ using System.Web;
 
 namespace WebShop.Models
 {
-    public class PitShop
-    {
-        public class PITShop
-        {
+   
             public class PitShopContext : System.Data.Entity.DbContext
             {
                 public PitShopContext(): base("WebShopContext")
@@ -30,7 +27,8 @@ namespace WebShop.Models
                 public int ID { get; set; }
                 [Required]
                 public string Name { get; set; }
-                public string Adress { get; set; }
+        public string PassWord { get; set; }
+        public string Adress { get; set; }
                 public int PhonNumber { get; set; }
                 public string EmailAdress { get; set; }
                 public virtual List<Order> Orderlist { get; set; }
@@ -70,6 +68,5 @@ namespace WebShop.Models
             }
 
 
-        }
-    }
+       
 }
